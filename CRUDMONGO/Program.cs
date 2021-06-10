@@ -27,9 +27,18 @@ namespace CRUDMONGO
             var basededatos = cliente.GetDatabase("agenda");
             var coleccion = basededatos.GetCollection<BsonDocument>("Personas");
 
+            // insert
             var persona = new BsonDocument { { "Nombre","Desde C#" } };
 
             coleccion.InsertOne(persona);
+
+
+            // FIND - Select
+
+            var documentos = coleccion.Find(new BsonDocument()).ToList().Count;
+
+            Console.WriteLine("Existen {0} documentos en la coleccion peronas",documentos);
+
 
 
         }
