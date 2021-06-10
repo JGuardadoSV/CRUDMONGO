@@ -15,6 +15,13 @@ namespace CRUDMONGO
 
             MongoClient cliente = new MongoClient(cadena);
 
+            var ListadoBDS = cliente.ListDatabases().ToList();
+            Console.WriteLine("Listado de bases de datos existentes");
+
+            foreach (var b in ListadoBDS)
+            {
+                Console.WriteLine(b);
+            }
 
         }
     }
