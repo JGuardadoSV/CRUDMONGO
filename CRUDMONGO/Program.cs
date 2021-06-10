@@ -17,7 +17,7 @@ namespace CRUDMONGO
 
             var ListadoBDS = cliente.ListDatabases().ToList();
             Console.WriteLine("Listado de bases de datos existentes");
-
+            //COMENTARIO EN EL ORIGINAL
             foreach (var b in ListadoBDS)
             {
                 Console.WriteLine(b);
