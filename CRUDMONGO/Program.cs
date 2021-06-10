@@ -40,6 +40,13 @@ namespace CRUDMONGO
             Console.WriteLine("Existen {0} documentos en la coleccion peronas",documentos);
 
 
+            var listado = coleccion.Find(new BsonDocument()).ToList();
+
+            foreach (var b in listado)
+            {
+                 Console.WriteLine(b);
+            }
+
 
         }
     }
